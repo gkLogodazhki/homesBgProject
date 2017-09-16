@@ -7,11 +7,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/Main")
-public class Main extends HttpServlet {
+@WebServlet("/RegisterMain")
+public class RegisterMain extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public Main() {
+    public RegisterMain() {
         super();
     }
 
@@ -22,6 +22,7 @@ public class Main extends HttpServlet {
 		doGet(request, response);
 		
 		response.setContentType("text/html");
+		
 		
 		
 		

@@ -3,7 +3,7 @@ package homesbg.registration.commonData;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class CommonValidationsPlusTelephoneNumbers extends TelephoneNumber{
+public abstract class CommonValidationsPlusTelephoneNumbers extends TelephoneNumber{
 	
 	public boolean simpleValidation(String text){
 		if(text == null || text.trim().length() < 3 || text.contains(" ")){

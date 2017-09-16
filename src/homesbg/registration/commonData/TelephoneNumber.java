@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 import homesbg.registration.agencyData.IllegalAgencyDataException;
 
-public class TelephoneNumber {
+public abstract class TelephoneNumber {
 	private Scanner scanner = new Scanner(System.in);
 	private List<String> number;
 	

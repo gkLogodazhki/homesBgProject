@@ -1,14 +1,12 @@
 package homesbg.registration.agencyData;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import homesbg.registration.commonData.CommonValidationsPlusTelephoneNumbers;
 
+@SuppressWarnings("unused")
 public class AgencyData extends CommonValidationsPlusTelephoneNumbers{
-	private Scanner scanner = new Scanner(System.in);
 	private Type type;
 	private String name;
 	private String address;
@@ -19,142 +17,30 @@ public class AgencyData extends CommonValidationsPlusTelephoneNumbers{
 	private String email;
 	
 	public AgencyData(){
-		companyType();
-		if(type.equals("Агенция_за_недвижими_имоти")){
-			System.out.println("Тези данни служат за административен контакт и не се публикуват в офертите на "
-					+ "агенцията");
-		}else{
-			System.out.println("Тези данни служат за административен контакт и не се публикуват в офертите на "
-					+ "строителната фирма");
-		}
-		companyName();
-		companyAddress();
-		companyMOL();
-		companyEIK();
-		companyAdministrativePersonNames();
-		companyDuty();
-		companyAddNumbers("*Телефони за административен контакт: ");
-		companyEmail();
 		
 	}
+	public AgencyData(String name,String address,String MOL,String EIK
+			,String administrativePersonNames, String duty, String email){
+		try{
+			setName(name);
+			setAddress(address);
+			setMOL(MOL);
+			setEIK(EIK);
+			setAdministrativePersonNames(administrativePersonNames);
+			setDuty(duty);
+			setEmail(email);
+		}catch(IllegalAgencyDataException e){
+			System.out.println(e.getMessage());
+		}
+	}
+	
 	
 	public Type getType(){
 		return type;
 	}
 	
-	private void companyEmail() {
-		while (email == null) {
-			try {
-				System.out.print("*Email за административен контакт: ");
-				setEmail(scanner.nextLine());
-			} catch (IllegalAgencyDataException e) {
-				System.out.println(e.getMessage());
-			}
-		}
-	}
 
-
-	private void companyDuty() {
-		while (duty == null) {
-			try {
-				System.out.print("*Длъжност: ");
-				setDuty(scanner.nextLine());
-			} catch (IllegalAgencyDataException e) {
-				System.out.println(e.getMessage());
-			}
-		}
-	}
-
-
-
-	private void companyAdministrativePersonNames() {
-		while (administrativePersonNames == null) {
-			try {
-				System.out.print("*Лице за административен контакт (име и фамилия): ");
-				setAdministrativePersonNames(scanner.nextLine());
-			} catch (IllegalAgencyDataException e) {
-				System.out.println(e.getMessage());
-			}
-		}
-	}
-
-
-
-	private void companyEIK() {
-		while (EIK == null) {
-			try {
-				System.out.print("*ЕИК/Булстат: ");
-				setEIK(scanner.nextLine());
-			} catch (IllegalAgencyDataException e) {
-				System.out.println(e.getMessage());
-			}
-		}
 		
-	}
-
-
-
-	private void companyMOL() {
-		while (MOL == null) {
-			try {
-				System.out.print("*МОЛ: ");
-				setMOL(scanner.nextLine());
-			} catch (IllegalAgencyDataException e) {
-				System.out.println(e.getMessage());
-			}
-		}
-	}
-
-
-
-	private void companyAddress() {
-		while (address == null) {
-			try {
-				System.out.print("*Адрес по регистрация: ");
-				setAddress(scanner.nextLine());
-			} catch (IllegalAgencyDataException e) {
-				System.out.println(e.getMessage());
-			}
-		}
-		
-	}
-
-	private void companyName() {
-		while (name == null) {
-			try {
-				System.out.print("*Име на фирмата (по данъчна регистрация.): ");
-				setName(scanner.nextLine());
-			} catch (IllegalAgencyDataException e) {
-				System.out.println(e.getMessage());
-			}
-		}
-		
-	}
-
-	private void companyType() {
-		while (type == null) {
-			try {
-				System.out.println("*Фирмата е: ");
-				System.out.println("1) Агенция за недвижими имоти");
-				System.out.println("2) Строителна фирма");
-				System.out.print("Избери: ");
-				int n = Integer.parseInt(scanner.nextLine());
-				if (n == 1) {
-					setType(Type.Агенция_за_недвижими_имоти);
-				} else if (n == 2) {
-					setType(Type.Строителна_фирма);
-				} else {
-					System.out.println("Изберете една от двете опции.");
-				}
-			} catch (IllegalAgencyDataException e) {
-				System.out.println(e.getMessage());
-			}catch(InputMismatchException e){
-				System.out.println("Моля изберете между \"1\" и \"2\"");
-			}
-		}
-		
-	}
-
 	public void setType(Type type) throws IllegalAgencyDataException {
 		if(type == null){
 			throw new IllegalAgencyDataException("Невалиден тип на фирмата");
