@@ -1,8 +1,9 @@
-package estate;
+package homesbg.estate;
 
 import java.util.Set;
 
-import ad.Place;
+import homesbg.ad.Place;
+
 
 public class Land extends Estate {
 

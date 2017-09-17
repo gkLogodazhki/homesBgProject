@@ -1,4 +1,4 @@
-package ad;
+package homesbg.ad;
 
 public class Place {
 

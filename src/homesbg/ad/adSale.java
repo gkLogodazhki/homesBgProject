@@ -1,9 +1,9 @@
-package ad;
+package homesbg.ad;
 
 import java.util.Set;
 
-import estate.Estate;
-import registration.contactData.ContactData;
+import homesbg.estate.Estate;
+import homesbg.registration.contactData.ContactData;
 
 public class adSale extends Ad {
 
