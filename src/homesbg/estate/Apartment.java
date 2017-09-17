@@ -15,6 +15,18 @@ public class Apartment extends Building {
 				constructionKind, heating);
 		this.floor = floor;
 	}
+
+	public int getFloor() {
+		return floor;
+	}
+
+	public void setFloor(int floor) {
+		if (floor > 0 && floor <= this.getAllFloors()) {
+			this.floor = floor;
+		} else {
+			System.out.println("Incorrect floor");
+		}
+	}
 	
 	
 	

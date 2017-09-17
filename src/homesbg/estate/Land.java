@@ -16,7 +16,19 @@ public class Land extends Estate {
 	public Land(double area, EstateKind estateKind, Set<Extrable> extrables, String extraInfo, Place place,
 			int category) {
 		super(area, estateKind, extrables, extraInfo, place);
-		this.category = category;
+		this.setCategory(category);
+	}
+
+	public int getCategory() {
+		return category;
+	}
+
+	public void setCategory(int category) {
+		if (category > 0) {
+			this.category = category;
+		} else {
+			System.out.println("Incorrect category");
+		}
 	}
 	
 	

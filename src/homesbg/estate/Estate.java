@@ -1,10 +1,11 @@
 package estate;
 
 import java.util.Set;
+import java.util.TreeSet;
 
 import ad.Place;
 
-public class Estate {
+public abstract class Estate {
 
 	public enum EstateKind{
 		BUILDING, PARCEL, LAND
@@ -40,12 +41,58 @@ public class Estate {
 	private Place place;
 	
 	public Estate(double area, EstateKind estateKind, Set<Extrable> extrables, String extraInfo, Place place) {
-		this.area = area;
+		this.setArea(area);
+		this.setEstateKind(estateKind);
+		this.extrables = new TreeSet<>((o1,o2)->o1.toString().compareTo(o2.toString()));
+		this.setExtrables(extrables);
+		this.setExtraInfo(extraInfo);
+		this.setPlace(place);
+	}
+
+	public double getArea() {
+		return area;
+	}
+
+	public void setArea(double area) {
+		if (area > 0) {
+			this.area = area;
+		} else {
+			System.out.println("area size must be greater than 0");
+		}
+	}
+
+	public EstateKind getEstateKind() {
+		return estateKind;
+	}
+
+	public void setEstateKind(EstateKind estateKind) {
 		this.estateKind = estateKind;
+	}
+
+	public Set<Extrable> getExtrables() {
+		return java.util.Collections.unmodifiableSet(this.extrables);
+	}
+
+	public void setExtrables(Set<Extrable> extrables) {
 		this.extrables = extrables;
-		this.extraInfo = extraInfo;
+	}
+
+	public String getExtraInfo() {
+		return extraInfo;
+	}
+
+	public void setExtraInfo(String extraInfo) {
+		this.extraInfo = !"".equals(extraInfo) ? extraInfo : "";
+	}
+
+	public Place getPlace() {
+		return place;
+	}
+
+	public void setPlace(Place place) {
 		this.place = place;
 	}
+	
 	
 	
 }
