@@ -1,4 +1,4 @@
-package homesbg.ad;
+package ad;
 
 import java.io.File;
 import java.util.Set;
@@ -6,8 +6,8 @@ import java.util.TreeSet;
 
 import com.google.gson.Gson;
 
-import homesbg.estate.Estate;
-import homesbg.registration.contactData.ContactData;
+import estate.Estate;
+import registration.contactData.ContactData;
 
 public abstract class Ad {
 
