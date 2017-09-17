@@ -14,7 +14,8 @@ import com.google.gson.Gson;
 import homesbg.ad.Ad;
 import homesbg.ad.Ad.Currency;
 import homesbg.ad.AdLoan;
-import homesbg.ad.Place.INeighborhood;
+import homesbg.ad.Place;
+import homesbg.ad.Place.*;
 import homesbg.estate.Apartment;
 import homesbg.estate.Building.ConstructionKind;
 import homesbg.estate.Building.Creation;
@@ -43,7 +44,7 @@ public class Demo {
 				, new Place(City.SOFIA, INeighborhood.Sofia.LOZENEC, "James Boucher 3")
 				, true, 7, Furnishing.FURNISHED, Creation.AFTER_2006, ConstructionKind.BRICK, Heating.LOCAL, 4)
 				
-//				, new Agency() // error with Agency.class implementation, comment by Georgi L.
+//				, new Agency()
 				, null
 				
 				, pictures
@@ -54,7 +55,7 @@ public class Demo {
 				, new Place(City.SOFIA, INeighborhood.Sofia.MLADOST, "James Boucher 3")
 				, true, 7, Furnishing.UNFURNISHED, Creation._2000_2006, ConstructionKind.EPK, Heating.ELECTRICAL, 4)
 				
-//				, new Agency() // error with Agency.class implementation, comment by Georgi L.
+//				, new Agency()
 				, null
 				
 				, pictures

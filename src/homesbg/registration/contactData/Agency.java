@@ -2,6 +2,7 @@ package homesbg.registration.contactData;
 
 @SuppressWarnings("unused")
 public class Agency extends ContactData{
+	
 	private String agencyName;
 	
 	public Agency(){
@@ -18,10 +19,9 @@ public class Agency extends ContactData{
 		}
 	}
 	
-	
 	public void setAgencyName(String agencyName) throws IllegalContactDataException {
 		if(agencyName == null || agencyName.trim().length() < 3){
-			throw new IllegalContactDataException("Името на агенцията трябва да съдържа поне 3 символа.");
+			throw new IllegalContactDataException("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ 3 пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.");
 		}
 		this.agencyName = agencyName;
 	}

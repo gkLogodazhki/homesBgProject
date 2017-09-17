@@ -8,12 +8,13 @@ import java.util.Set;
 import homesbg.ad.Ad;
 import homesbg.ad.Ad.AdType;
 import homesbg.registration.contactData.ContactData;
+import homesbg.registration.contactData.ContactData.ContactDataType;
 
 
 public class RealEstateCompany {
 
 	private String name;
-	private Map<ContactData,Set<ContactData>> users;
+	private Map<ContactDataType,Set<ContactData>> users;
 	private Map<AdType,Set<Ad>> ads;
 	
 	public RealEstateCompany(String name) {
