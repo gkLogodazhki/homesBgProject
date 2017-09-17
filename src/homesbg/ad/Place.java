@@ -10,14 +10,44 @@ public class Place {
 			LOZENEC, MLADOST, VITOSHA
 		}
 	}
+	
 	private City place;
 	private INeighborhood neighborhood;
 	private String address;
 	
-	public Place(City place, INeighborhood neighborhood, String address) {
-		this.place = place;
-		this.neighborhood = neighborhood;
-		this.address = address;
+	public Place() {
+		this.setPlace(City.SOFIA);
 	}
+	
+	public Place(City place, INeighborhood neighborhood, String address) {
+		this.setPlace(place);
+		this.setNeighborhood(neighborhood);
+		this.setAddress(address);
+	}
+
+	public City getPlace() {
+		return place;
+	}
+
+	public void setPlace(City place) {
+		this.place = place;
+	}
+
+	public INeighborhood getNeighborhood() {
+		return neighborhood;
+	}
+
+	public void setNeighborhood(INeighborhood neighborhood) {
+		this.neighborhood = neighborhood;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = !"".equals(address)? address : null;
+	}
+	
 	
 }
