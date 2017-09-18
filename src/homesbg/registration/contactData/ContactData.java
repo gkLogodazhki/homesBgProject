@@ -16,12 +16,10 @@ public abstract class ContactData extends TelephoneNumber{
 	private String address;
 	private String webSiteLink;
 	private ContactDataType contactDataType;
-	
 
 	public ContactData(){
 		
 	}
-	
 	public ContactData(String country, String area, String livingArea, String address
 			, String webSiteLink){
 		try{
@@ -76,6 +74,7 @@ public abstract class ContactData extends TelephoneNumber{
 		}
 		return true;
 	}
+	
 	public ContactDataType getContactDataType() {
 		return this.contactDataType;
 	}
