@@ -4,8 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel = "stylesheet" type = "text/css" href = "CSS/Registration.css?1">
-<link >
+<link rel = "stylesheet" type = "text/css" href = "CSS/Registration.css?2">
 <title>Имоти - апартаменти, къщи, парцели, земеделски земи.</title>
 </head>
 <body>
@@ -44,7 +43,7 @@
 	
 	<div id="middleText">
 		<div class = "regTitle">
-			Регистрация на агенция за недвижими имоти
+			Регистрация на строителна фирма
 		</div>
 		<div class="warningImg">
 			<img class="warning" src="CSS/Images/warnings_sign.jpg" alt="Warning" width="51px" height="46px">
@@ -67,7 +66,7 @@
 	<div id="registerSection">
 		<form action="../RegisterMain" method = "post">
 			
-			<p class="beforeSectionData">Данни за агенцията</p>
+			<p class="beforeSectionData">Данни за строителната фирма</p>
 			<div class = "agencyData">
 			
 				<div class= "textArea firstDataInAgencySection">
@@ -75,16 +74,16 @@
 					<b>Фирмата е:</b>
 				</div>
 				<div class = "mainOptions">
-					<input class="inputPageType" type="radio" name="pageType" value = "1" checked> 
+					<input class="inputPageType" type="radio" name="pageType" value = "1" onClick="location = 'http://localhost:8080/HomesBgProject/Registration/RegistrationAgency.jsp'"> 
 					<p class="pPageType">Агенция за недвижими имоти</p>
-					<input class="inputPageType"  type="radio" name="pageType" value = "2" onClick="location = 'http://localhost:8080/HomesBgProject/Registration/RegistrationConstruction.jsp'">
+					<input class="inputPageType"  type="radio" name="pageType" value = "2" checked >
 					<p class="pPageType">Строителна фирма</p> 
 				</div>
 				
 				
 				<div class="straightLine"></div>
 				
-				<p class = "administrativeContactData">Тези данни служат за административен контакт и не се публикуват в офертите на агенцията</p>
+				<p class = "administrativeContactData">Тези данни служат за административен контакт и не се публикуват в офертите на строителната фирма</p>
 				
 				<div class= "textArea companyName">
 				<span class = "redStar">*</span>
@@ -165,14 +164,8 @@
 			<div class="contactData">
 				
 				<p style="font-size:75%; margin-left:3%; margin-top:2%;">
-				Тези данни се публикуват като част от офертите на агенцията и служат за контакт от страна на купувачите/наемателите с агенцията</p>
+				Тези данни се публикуват като част от офертите на строителната фирма и служат за контакт от страна на купувачите/наемателите с фирмата</p>
 				
-				
-				<div class="contactDataName">
-				<span class = "redStar">*</span>
-						<b>Име на агенцията:</b>
-						<input class="contactInputData" type="text" name="agencyName" required>
-				</div>
 				
 				<div class="contactDataCountry">
 				<span class = "redStar">*</span>
@@ -223,9 +216,9 @@
 				
 			</div>
 			
-			<p class="beforeSectionData beforePageData">Страница на агенцията в -------</p>
+			<p class="beforeSectionData beforePageData">Страница на строителната фирма в -------</p>
 			<div id ="page">
-				<p class="pageText">Тази страница съдържа всички оферти, публикувани от агенцията в -------. Адресът на страницата се показва във визитката на агенцията под всяка оферта. Препоръчително е името на страницата да съвпада с името на агенцията. Желаното име се изписва с малки букви на латиница, без интервали.</p>
+				<p class="pageText">Тази страница съдържа всички оферти, публикувани от строителната фирма в -------. Адресът на страницата се показва във визитката на фирмата под всяка оферта.</p>
 			
 				<div class="pageData">
 					<span class = "redStar">*</span>
@@ -237,9 +230,9 @@
 			<p class="beforeSectionData beforeCustomerData">Данни за потребителя</p>
 			<div id = "customerData" >
 				<p style="margin-top: 2%; margin-left:2%; margin-bottom:0;font-size:75%;">Този потребител ще има администраторски права. С него ще можете:</p>
-				<p class="customerText">- да редактирате данните за Вашата агенция</p>
-				<p class="customerText">- да добавяте/изтривате допълнителни потребители (брокери) с права за публикуване на обяви към акаунта на агенцията</p>
-				<p class="customerText">да публикувате/разглеждате/редактирате обяви публикувани от Вас и/или други потребители (брокери)</p>
+				<p class="customerText">- да редактирате данните за Вашата фирма</p>
+				<p class="customerText">- да добавяте/изтривате допълнителни потребители (търговци) с права за публикуване на обяви към акаунта на строителната фирма</p>
+				<p class="customerText">- да публикувате/разглеждате/редактирате обяви публикувани от Вас и/или други потребители (търговци)</p>
 			
 				<div class="customerEmail">
 					<span class = "redStar">*</span>
@@ -318,13 +311,9 @@
 				<input id="submitData" type="submit" name="submit" value="Регистрирай">
 			</div>
 			
-			
 		</form>
-		
-		
 	</div>
 	
-
 	<script src="Js/jquery-3.2.1.js?3"></script>
 	<script src="Js/registration.js?2"></script>
 </body>
