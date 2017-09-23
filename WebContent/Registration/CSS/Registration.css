@@ -55,7 +55,7 @@ body{
 	height:100%;
 	color:black;
 	text-decoration:none;
-	background-image: url("Images/apartments-black.jpg");
+	background-image: url("../../Images/apartments-black.jpg");
 	background-position:left;
 	background-repeat:no-repeat;
 	background-color:white;
@@ -66,14 +66,14 @@ body{
 	font-size:80%;
 	line-height:350%;
 	width:15%;
-	background-image: url("Images/houses-white.jpg");
+	background-image: url("../../Images/houses-white.jpg");
 
 }
 .land{
 	font-size:80%;
 	line-height:350%;
 	width:15%;
-	background-image: url("Images/realestate-white.jpg");
+	background-image: url("../../Images/realestate-white.jpg");
 }
 
 .office{

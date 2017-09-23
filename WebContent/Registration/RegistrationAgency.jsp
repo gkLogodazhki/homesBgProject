@@ -26,7 +26,7 @@
 			</a>
 			<div class = "empty"></div>
 			<a class = "office commonOptionsProperties" href= "#">
-			<img src="CSS/Images/buildings-white.jpg" class="img" alt="buildings" width="20%" height="70%">
+			<img src="../Images/buildings-white.jpg" class="img" alt="buildings" width="20%" height="70%">
 			Офиси и бизнес имоти
 			</a>
 		</div>
@@ -35,7 +35,7 @@
 		
 		
 		<div class = "bottomMenu">
-			<a class = "field" href = "#">Начало</a>
+			<a class = "field" href = "../Login/LoginPage.jsp">Начало</a>
 			<a class = "field agency" href = "#">Агенции</a>
 			<a class = "field" href = "#">Строителни</a>
 			<a class = "field" href = "#">Публикуване</a>
@@ -57,7 +57,7 @@
 			В случай че Ви е необходима помощ или допълнителна информация, не се колебайте да се свържете с нас:</p>
 	
 		<div class="phoneGif">
-			<img class="phone" src="CSS/Images/phone.gif" alt="phone" width="20px" height="16px">
+			<img class="phone" src="../Images/phone.gif" alt="phone" width="20px" height="16px">
 			-- --- -- --
 		</div>
 	</div>

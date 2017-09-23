@@ -1,0 +1,205 @@
+body{
+	position:absolute;
+	width:100%;
+	height:100%;
+	margin:0;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+#header{
+	margin-left:13.5%;
+	position:absolute;
+	width:72%;
+	height:25%;
+}
+#header::after{
+	content:"";
+	clear:both;
+}
+.linesAboveDomainTabs{
+	position:relative;
+	display:-webkit-inline-box;
+	width:100%;
+	height:2%;
+	
+}
+.redLine{
+	position:relative;
+	width:15%;
+	height:100%;
+	background-color:#ce3201;
+	
+}
+.blackLine{
+	position:relative;
+	width:85%;;
+	height:100%;
+	background-color:black;
+}
+.domainTabs{
+	position:absolute;
+	width:100%;
+	height:25%;
+	background-color:black;
+	text-align:center;
+	color:white;
+	font-weight: bold;
+}
+.apartment {
+	font-size:80%;
+	position:relative;
+	line-height:350%;
+	padding-left:2%;
+	float:left;
+	width:13%;
+	height:100%;
+	color:black;
+	text-decoration:none;
+	background-image: url("../../Images/apartments-black.jpg");
+	background-position:left;
+	background-repeat:no-repeat;
+	background-color:white;
+	text-align:center;
+	display:inline-block;
+}
+.house{
+	font-size:80%;
+	line-height:350%;
+	width:15%;
+	background-image: url("../../Images/houses-white.jpg");
+
+}
+.land{
+	font-size:80%;
+	line-height:350%;
+	width:15%;
+	background-image: url("../../Images/realestate-white.jpg");
+}
+
+.office{
+	font-size:80%;
+	top:15%;
+	text-align:start;
+	line-height:100%;
+	width:18%;
+}
+.commonOptionsProperties{
+	position:relative;
+	float:left;
+	height:100%;
+	display:inline-block;
+	color:white;
+	left:1%;
+	text-decoration:none;
+	background-position:left;
+	background-repeat:no-repeat;
+}
+.empty{
+	position:relative;
+	float:left;
+	width:35%;
+	height:100%;
+}
+.img{
+	float:left;
+}
+.apartmentInfo{
+	position:relative;
+	float:left;
+	top:30%;
+}
+
+.bottomMenu{
+	position:absolute;
+	top:73%;
+	width:100%;
+	height:20%;
+	border-bottom:2px solid #990000;
+	font-size:75%;
+}
+.bottomMenu .field{
+	float:left;
+	color:black;
+	font-weight:bolder;
+	
+	margin-left: 1.5%;
+	margin-top: 0.3%;
+	padding-top: 0.8%;
+	padding-left: 1.3%;
+	padding-bottom: 0.5%;
+	padding-right: 1.3%;
+	    
+	border-radius: 7px 7px 0px 0px;
+	border-color:#b9b5a3;
+	border-style:solid;
+	border-width: 1px 1px 0px;
+	text-decoration:none;
+}
+
+.bottomMenu .field:hover{
+	color:red;
+}
+
+.bottomMenu .agency{
+	margin-left:35%;
+}
+
+.yesllowText{
+	float:left;
+	width:35%;
+	height:40%;
+	background-color:rgb(255, 254, 152);
+}
+
+#enterAndRegisterSection{
+	position:absolute;
+	top:25%;
+	width:72%;
+	height:40%;
+	margin-left:13.5%;
+	padding:0;
+}
+.registrationText{
+	margin-left:5%;
+}
+.goToRegister{
+	display:block;
+	float:right;
+	margin-bottom:2%;
+	margin-left: 5%;
+	width:55%;
+	padding-left:4%;
+	border-style:solid;
+	border-radius:4px 4px;
+	border-color:#b9b5a3;
+	border-width:1px;
+}
+.enterField{
+	margin-top:10%;
+}
+
+.innerEnterField{
+	width:30%;
+	padding-left:10%;
+	border-style:solid;
+	border-radius:4px 4px;
+	border-color:#b9b5a3;
+	border-width:1px;
+}
+.enterField p{
+	font-size:80%;
+}
+.submitButton{
+	
+	display:block;
+	background-color:#990000;
+	border-color:#800000;
+	border-radius:5px 5px 5px 5px;
+	margin-top:4%;
+	margin-bottom:4%;
+	margin-left:20%;
+}
+.straightLine{
+	margin-top:3%;
+	border:1px solid #990000;
+}

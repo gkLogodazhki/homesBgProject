@@ -31,21 +31,8 @@ public class CustomerData extends CommonValidationsPlusTelephoneNumbers {
 		setSkype(skype);
 		setAdditionalInfo(addInfo);
 		setAccountUsage(accountUsage);
-		
-		changePasswordForMySql();
-		
 	}
 	
-
-	private void changePasswordForMySql() {
-		if(password != null){
-			StringBuilder temp = new StringBuilder();
-			for (int i = 0; i < password.length(); i++) {
-				temp.append((password.charAt(i)*5) + 25);
-			}
-			password = temp.toString();
-		}
-	}
 
 	public void setEmail(String email) throws IllegalCustomerDataException {
 		if(!emailValidation(email)){
@@ -89,17 +76,11 @@ public class CustomerData extends CommonValidationsPlusTelephoneNumbers {
 		this.duty = duty;
 	}
 	
-	public void setSkype(String skype) throws IllegalCustomerDataException {
-		if(skype == null || skype.trim().isEmpty()){
-			throw new IllegalCustomerDataException("invalid skype");
-		}
+	public void setSkype(String skype) {
 		this.skype = skype;
 	}
 	
-	public void setAdditionalInfo(String additionalInfo) throws IllegalCustomerDataException {
-		if(additionalInfo == null || additionalInfo.trim().isEmpty()){
-			throw new IllegalCustomerDataException("empty additional info.");
-		}
+	public void setAdditionalInfo(String additionalInfo) {
 		this.additionalInfo = additionalInfo;
 	}
 	public void setAccountUsage(String accountUsage) throws IllegalCustomerDataException {
