@@ -1,6 +1,5 @@
 package homesbg.registration.pageData;
 
-@SuppressWarnings("unused")
 public class Page {
 	private String name;
 
@@ -10,10 +9,12 @@ public class Page {
 
 	public void setName(String name) {
 		if(name == null || name.trim().length() < 3){
-			throw new IllegalArgumentException("Името трябва да съдържа минимум 3 симлова.");
+			throw new IllegalArgumentException("Invalid page name");
 		}
 		this.name = name;
 	}
 	
-	
+	public String getName(){
+		return name;
+	}
 }

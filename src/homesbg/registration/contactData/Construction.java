@@ -7,8 +7,8 @@ public class Construction extends ContactData{
 		
 	}
 	public Construction(String country, String area, String livingArea, String address
-			, String webSiteLink){
-		super(country,area,livingArea,address,webSiteLink);
+			,String phone, String webSiteLink) throws IllegalContactDataException{
+		super(country,area,livingArea,address,phone,webSiteLink);
 	}
 	
 }

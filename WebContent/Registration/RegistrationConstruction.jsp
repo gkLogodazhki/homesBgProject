@@ -64,7 +64,7 @@
 	
 	
 	<div id="registerSection">
-		<form action="../RegisterMain" method = "post">
+		<form action="../Registration" method = "post">
 			
 			<p class="beforeSectionData">Данни за строителната фирма</p>
 			<div class = "agencyData">
@@ -137,7 +137,7 @@
 						<b>Длъжност:</b>
 				</div>
 				<div class="companyDutyInputArea">
-					<input class="inputData" type="text" name="duty" required>
+					<input class="inputData" type="text" name="companyDuty" required>
 				</div>
 			
 				
@@ -206,7 +206,7 @@
 				<div class="contactDataPhone">
 					<span class = "redStar">*</span>
 					<b>Телефон:</b>
-					<input class="phoneInputData" type="text" name="contactPhone[]" required>
+					<input class="phoneInputData" type="text" name="contactPhone" required>
 				</div>
 				
 				<div class="contactDataWebSite">
@@ -223,7 +223,7 @@
 				<div class="pageData">
 					<span class = "redStar">*</span>
 					<b>Желанo име на страница:</b>
-					<input class="pageInputData" type="text" name="page" required>
+					<input class="pageInputData" type="text" name="pageName" required>
 				</div>
 			</div>
 			
@@ -257,32 +257,32 @@
 				<div class="customerFName">
 					<span class = "redStar">*</span>
 					<b>Име:</b>
-					<input class="customerFNameInput" type="password" name="fName"  required>
+					<input class="customerFNameInput" type="text" name="fName"  required>
 				</div>
 				
 				
 				<div class="customerLName">
 					<span class = "redStar">*</span>
 					<b>Фамилия:</b>
-					<input class="customerLNameInput" type="password" name="lName"  required>
+					<input class="customerLNameInput" type="text" name="lName"  required>
 				</div>
 				
 				<div class="customerDuty">
 					<span class = "redStar">*</span>
 					<b>Длъжност:</b>
-					<input class="customerDutyInput" type="password" name="customerDuty"  required>
+					<input class="customerDutyInput" type="text" name="customerDuty"  required>
 				</div>
 				
 				<div class="customerPhone">
 					<span class = "redStar">*</span>
 					<b>Телефон:</b>
-					<input class="customerPhoneInput" type="password" name="customerPhone[]"  required>
+					<input class="customerPhoneInput" type="text" name="customerPhone"  required>
 				</div>
 				
 				
 				<div class="customerSkype">
 					<b>Skype:</b>
-					<input class="customerSkypeInput" type="password" name="skype" >
+					<input class="customerSkypeInput" type="text" name="skype" >
 				</div>
 				
 				<div class = "customerAdditionalInfo">
@@ -314,7 +314,7 @@
 		</form>
 	</div>
 	
-	<script src="Js/jquery-3.2.1.js?3"></script>
+	<script src="../JQueryLibrary/jquery-3.2.1.js"></script>
 	<script src="Js/registration.js?2"></script>
 </body>
 </html>
