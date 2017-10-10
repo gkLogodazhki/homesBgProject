@@ -1,4 +1,4 @@
-package demoAdAndEstate;
+package homesbg.demoAdAndEstate;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -11,19 +11,18 @@ import java.util.TreeSet;
 
 import com.google.gson.Gson;
 
-import ad.Ad;
-import ad.AdLoan;
-import ad.Place;
-import ad.Place.City;
-import ad.Place.INeighborhood;
-import estate.Apartment;
-import estate.Building.ConstructionKind;
-import estate.Building.Creation;
-import estate.Building.Furnishing;
-import estate.Building.Heating;
-import estate.Estate.EstateKind;
-import estate.Estate.Extrable;
-import ad.Ad.Currency;
+import homesbg.ad.Ad;
+import homesbg.ad.Ad.Currency;
+import homesbg.ad.AdLoan;
+import homesbg.ad.Place;
+import homesbg.ad.Place.*;
+import homesbg.estate.Apartment;
+import homesbg.estate.Building.ConstructionKind;
+import homesbg.estate.Building.Creation;
+import homesbg.estate.Building.Furnishing;
+import homesbg.estate.Building.Heating;
+import homesbg.estate.Estate.EstateKind;
+import homesbg.estate.Estate.Extrable;
 
 public class Demo {
 
@@ -45,7 +44,7 @@ public class Demo {
 				, new Place(City.SOFIA, INeighborhood.Sofia.LOZENEC, "James Boucher 3")
 				, true, 7, Furnishing.FURNISHED, Creation.AFTER_2006, ConstructionKind.BRICK, Heating.LOCAL, 4)
 				
-//				, new Agency() // error with Agency.class implementation, comment by Georgi L.
+//				, new Agency()
 				, null
 				
 				, pictures
@@ -56,7 +55,7 @@ public class Demo {
 				, new Place(City.SOFIA, INeighborhood.Sofia.MLADOST, "James Boucher 3")
 				, true, 7, Furnishing.UNFURNISHED, Creation._2000_2006, ConstructionKind.EPK, Heating.ELECTRICAL, 4)
 				
-//				, new Agency() // error with Agency.class implementation, comment by Georgi L.
+//				, new Agency()
 				, null
 				
 				, pictures

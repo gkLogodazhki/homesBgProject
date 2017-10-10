@@ -1,10 +1,11 @@
-package estate;
+package homesbg.estate;
 
 import java.util.Set;
 
 import com.google.gson.Gson;
 
-import ad.Place;
+import homesbg.ad.Place;
+
 
 public abstract class Building extends Estate {
 

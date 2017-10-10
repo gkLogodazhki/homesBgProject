@@ -1,14 +1,15 @@
-package demoAdAndEstate;
+package homesbg.demoAdAndEstate;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import ad.Ad;
-import ad.Ad.AdType;
-import registration.contactData.ContactData;
-import registration.contactData.ContactData.ContactDataType;
+import homesbg.ad.Ad;
+import homesbg.ad.Ad.AdType;
+import homesbg.registration.contactData.ContactData;
+import homesbg.registration.contactData.ContactData.ContactDataType;
+
 
 public class RealEstateCompany {
 

@@ -13,109 +13,120 @@ public class CustomerData extends CommonValidationsPlusTelephoneNumbers {
 	private String duty;
 	private String skype;
 	private String additionalInfo;
-	private String accountUsage;
+	private AccountUsage accountUsage;
 	
 	public CustomerData(){
 	}
 	
 	public CustomerData(String email, String password, String repeatedPassword, String fName
-			, String lName, String duty, String accountUsage){
-		try{
-			setEmail(email);
-			setPassword(password);
-			setRepeatedPassword(repeatedPassword);
-			setfName(fName);
-			setlName(lName);
-			setDuty(duty);
-			setAccountUsage(accountUsage);
-			
-		}catch(IllegalCustomerDataException e){
-			System.out.println(e.getMessage());
-		}
+			, String lName, String duty,String phone, String skype, String addInfo,
+			String accountUsage) throws IllegalCustomerDataException{
+		super(phone);
+		setEmail(email);
+		setPassword(password);
+		setRepeatedPassword(repeatedPassword);
+		setfName(fName);
+		setlName(lName);
+		setDuty(duty);
+		setSkype(skype);
+		setAdditionalInfo(addInfo);
+		setAccountUsage(accountUsage);
 	}
 	
-	public CustomerData(String email, String password, String repeatedPassword, String fName
-			, String lName, String duty, String skype, String accountUsage){
-		this(email,password,repeatedPassword,fName,lName,duty,accountUsage);
-		try{
-			setSkype(skype);
-		}catch(IllegalCustomerDataException e){
-			System.out.println(e.getMessage());
-		}
-		
-	}
-	
-	public CustomerData(String email, String password, String repeatedPassword, String fName
-			, String lName, String duty,String skype, String additionalInfo, String accountUsage){
-		this(email,password,repeatedPassword,fName,lName,duty,skype,accountUsage);
-		try{
-			setAdditionalInfo(additionalInfo);
-		}catch(IllegalCustomerDataException e){
-			System.out.println(e.getMessage());
-		}
-		
-	}
 
 	public void setEmail(String email) throws IllegalCustomerDataException {
 		if(!emailValidation(email)){
-			throw new IllegalCustomerDataException("Невалиден емайл.");
+			throw new IllegalCustomerDataException("Invalid email");
 		}
 		this.email = email;
 	}
 	
 	public void setPassword(String password) throws IllegalCustomerDataException {
-		if(!simplePasswordValidation(password)){
-			throw new IllegalCustomerDataException("Паролата трябва да съдържа поне 6 символа.");
+		if(password == null || password.trim().length() < 6){
+			throw new IllegalCustomerDataException("invalid password");
 		}
 		this.password = password;
 	}
 	
 	public void setRepeatedPassword(String repeatedPassword) throws IllegalCustomerDataException {
 		if(repeatedPassword == null || !repeatedPassword.equals(password)){
-			throw new IllegalCustomerDataException("Разминаване между паролите. Моля опитайте пак.");
+			throw new IllegalCustomerDataException("invalid second password");
 		}
 		this.repeatedPassword = repeatedPassword;
 	}
 	
 	public void setfName(String fName) throws IllegalCustomerDataException {
 		if(!simpleValidation(fName)){
-			throw new IllegalCustomerDataException("Моля въведете истинско име.");
+			throw new IllegalCustomerDataException("invalid first name");
 		}
 		this.fName = fName;
 	}
 	
 	public void setlName(String lName) throws IllegalCustomerDataException {
 		if(!simpleValidation(lName)){
-			throw new IllegalCustomerDataException("Моля въведете истинска фамилия.");
+			throw new IllegalCustomerDataException("invalid second name");
 		}
 		this.lName = lName;
 	}
 	
 	public void setDuty(String duty) throws IllegalCustomerDataException {
 		if(!simpleValidation(duty)){
-			throw new IllegalCustomerDataException("Невалидна длъжност.");
+			throw new IllegalCustomerDataException("invalid duty");
 		}
 		this.duty = duty;
 	}
 	
-	public void setSkype(String skype) throws IllegalCustomerDataException {
-		if(skype == null || skype.trim().isEmpty()){
-			throw new IllegalCustomerDataException("Невалидна скайп.");
-		}
+	public void setSkype(String skype) {
 		this.skype = skype;
 	}
 	
-	public void setAdditionalInfo(String additionalInfo) throws IllegalCustomerDataException {
-		if(additionalInfo == null || additionalInfo.trim().isEmpty()){
-			throw new IllegalCustomerDataException("Моля въведете допълнителна информация.");
-		}
+	public void setAdditionalInfo(String additionalInfo) {
 		this.additionalInfo = additionalInfo;
 	}
 	public void setAccountUsage(String accountUsage) throws IllegalCustomerDataException {
-		if(accountUsage == null || accountUsage.trim().isEmpty()){
-			throw new IllegalCustomerDataException("Нвалидна опция.");
+		switch(accountUsage){
+		case "1": this.accountUsage = AccountUsage.СЃР°РјРѕ_РєР°С‚Рѕ_Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ;break;
+		case "2": this.accountUsage = AccountUsage.РєР°С‚Рѕ_Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ_Рё_Р±СЂРѕРєРµСЂ;
 		}
-		this.accountUsage = accountUsage;
 	}
 
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public String getfName() {
+		return fName;
+	}
+
+	public String getlName() {
+		return lName;
+	}
+
+	public String getDuty() {
+		return duty;
+	}
+
+	public String getSkype() {
+		return skype;
+	}
+
+	public String getAdditionalInfo() {
+		return additionalInfo;
+	}
+
+	public AccountUsage getAccountUsage() {
+		return accountUsage;
+	}
+	
+	enum AccountUsage{
+		СЃР°РјРѕ_РєР°С‚Рѕ_Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ, РєР°С‚Рѕ_Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ_Рё_Р±СЂРѕРєРµСЂ
+	}
+	
+	
+	
 }

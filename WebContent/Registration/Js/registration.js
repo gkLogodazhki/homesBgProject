@@ -1,0 +1,22 @@
+$(function(){
+	$(".selectCountry").on('mouseleave',function(){
+		if($(".selectCountry").val() === "1"){
+			$(".contactDataArea").css("display","block");
+			$(".contactDataLivingArea").css("display","block");
+			$(".contactData").css("height","53%");
+			$("#page").css("top","157%");
+			$(".beforePageData").css("top","153%");
+			$("#customerData").css("top","189%");
+			$(".beforeCustomerData").css("top","185%");
+		}
+		else{
+			$(".contactDataArea").css("display","none");
+			$(".contactDataLivingArea").css("display","none");
+			$(".contactData").css("height","42%");
+			$("#page").css("top","144%");
+			$(".beforePageData").css("top","140%");
+			$("#customerData").css("top","176%");
+			$(".beforeCustomerData").css("top","172%");
+		}
+	});
+});

@@ -1,9 +1,10 @@
-package estate;
+package homesbg.estate;
 
 import java.util.Set;
 import java.util.TreeSet;
 
-import ad.Place;
+import homesbg.ad.Place;
+
 
 public abstract class Estate {
 

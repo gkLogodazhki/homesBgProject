@@ -55,7 +55,7 @@ body{
 	height:100%;
 	color:black;
 	text-decoration:none;
-	background-image: url("Images/apartments-black.jpg");
+	background-image: url("../../Images/apartments-black.jpg");
 	background-position:left;
 	background-repeat:no-repeat;
 	background-color:white;
@@ -66,14 +66,14 @@ body{
 	font-size:80%;
 	line-height:350%;
 	width:15%;
-	background-image: url("Images/houses-white.jpg");
+	background-image: url("../../Images/houses-white.jpg");
 
 }
 .land{
 	font-size:80%;
 	line-height:350%;
 	width:15%;
-	background-image: url("Images/realestate-white.jpg");
+	background-image: url("../../Images/realestate-white.jpg");
 }
 
 .office{
@@ -108,16 +108,9 @@ body{
 	float:left;
 	top:30%;
 }
-.logo{
-	position:relative;
-	top:30%;
-	float:left;
-	background-image:url("Images/homes-logo.jpg");
-	background-repeat:no-repeat;
-	width:30%;
-	height:40%;
-	margin-left:14%;
-}
+
+
+
 .bottomMenu{
 	position:absolute;
 	top:73%;
@@ -125,7 +118,6 @@ body{
 	height:20%;
 	border-bottom:2px solid #c83a08;
 	font-size:75%;
-	
 }
 .bottomMenu .field{
 	float:left;
@@ -145,6 +137,11 @@ body{
 	border-width: 1px 1px 0px;
 	text-decoration:none;
 }
+
+.bottomMenu .field:hover{
+	color:red;
+}
+
 .bottomMenu .agency{
 	margin-left:35%;
 }
@@ -158,6 +155,7 @@ body{
 	height:25%;
 	display:inline-block;
 }
+
 #middleText .regTitle{
 	padding-top:0.5%;
 	font-size:200%;
@@ -197,10 +195,9 @@ body{
 }
 
 #registerSection{
-	position:absolute;
+	position:relative;
 	margin-left:13.5%;
 	width:72%;
-	height:100px;
 	height:100%;
 	top:58%;
 }
@@ -210,14 +207,15 @@ body{
 }
 
 .beforeSectionData{
+	margin:2px;
 	font-weight:bolder;
 	text-align:left;
-	font-sie:90%;
+	font-size:90%;
 }
 .agencyData{
 	position:absolute;
 	width:100%;
-	height:70%;
+	height:80%;
 	border-radius:7px 7px 7px 7px;
 	border-color:#b9b5a3;
 	border-style:solid;
@@ -230,6 +228,7 @@ body{
 	font-size:80%;
 }
 .textArea{
+	position:absolute;
 	float:left;
 	width:30%;
 	text-align:right;
@@ -269,3 +268,328 @@ body{
 	margin-left:1%;
 }
 
+.administrativeContactData{
+	position:absolute;
+	top:17%;
+	font-size:80%;
+	margin-left:5%;
+}
+
+.companyName{
+	top:20%;
+}
+.companyNameInputArea{
+	position:absolute;
+	top:25%;
+	left:32%;
+}
+.inputData{
+	width:130%;
+}
+.companyAddress{
+	top:29%;
+}
+.companyAddressInputArea{
+	position:absolute;
+	top:34%;
+	left:32%;
+}
+.MOL{
+	top:47%;
+}
+.companyMOLInputArea{
+	position:absolute;
+	top:52%;
+	left:32%;
+}
+.EIK{
+	top:53%;
+}
+.companyEIKInputArea{
+	position:absolute;
+	top:58%;
+	left:32%;
+}
+.administrativeContact{
+	top:59%;
+}
+.companyAdministrativeContactInputArea{
+	position:absolute;
+	top:64%;
+	left:32%;
+}
+
+.duty{
+	top:67%;
+}
+.companyDutyInputArea{
+	position:absolute;
+	top:72%;
+	left:32%;
+}
+
+.phoneNumber{
+	top:73%;
+}
+.companyPhoneNumberInputArea{
+	position:absolute;
+	top:78%;
+	left:32%;
+}
+
+.administrativeContactEmail{
+	top:82%;
+}
+.companyAdministrativeContactEmailInputArea{
+	position:absolute;
+	top:86%;
+	left:32%;
+}
+
+.beforeContactData{
+	position:absolute;
+	top:90%;
+}
+
+.contactData{
+	position:absolute;
+	width:100%;
+	height:53%;
+	border-radius:7px 7px 7px 7px;
+	border-color:#b9b5a3;
+	border-style:solid;
+	border-width:1px;	
+	top:94%;
+}
+
+.contactDataName{
+	padding-left:14%;
+}
+.contactInputData{
+	position:relative;
+	left:14px;
+	width:27.5%;
+}
+.contactDataCountry{
+	margin-top:1%;
+	padding-left:20.7%;
+}
+.selectCountry{
+	position:relative;
+	left:14px;
+	width:35%;
+}
+.contactDataArea{
+	margin-top:1%;
+	padding-left:22.4%;
+}
+.areaInputData{
+	position:relative;
+	left:14px;
+	width:30.6%;
+}
+
+.contactDataLivingArea{
+	margin-top:1%;
+	padding-left:15.5%;
+}
+.livingAreaInputData{
+	position:relative;
+	left:14px;
+	width:28.3%;
+}
+.contactDataAddress{
+	margin-top:1%;
+	padding-left:23%;
+	
+}
+.addressInputData{
+	position:relative;
+	left:14px;
+	width:31%;
+}
+.contactDataAddress div{
+	position:relative;
+	bottom:70px;
+	display:inline-block;
+}
+
+.contactDataPhone{
+	margin-top:1%;
+	padding-left:20.7%;
+}
+.phoneInputData{
+	position:relative;
+	left:14px;
+	width:30.5%;
+}
+.contactDataWebSite{
+	margin-top:1%;
+	padding-left:22.5%;
+}
+.webSiteInputData{
+	position:relative;
+	left:14px;
+	width:31%;
+}
+
+#page{
+	position:absolute;
+	width:100%;
+	height:20%;
+	border-radius:7px 7px 7px 7px;
+	border-color:#b9b5a3;
+	border-style:solid;
+	border-width:1px;	
+	top:157%;
+}
+
+.beforePageData{
+	position:absolute;
+	top: 153%;	
+}
+.pageText{
+	font-size:75%;
+	margin:2%;
+}
+.pageData{
+	margin-top:1%;
+	padding-left:8.5%;
+}
+.pageInputData{
+	position:relative;
+	left:14px;
+	width:26%;
+}
+
+#customerData{
+	position:absolute;
+	width:100%;
+	height:95%;
+	border-radius:7px 7px 7px 7px;
+	border-color:#b9b5a3;
+	border-style:solid;
+	border-width:1px;	
+	top:189%;
+}
+.beforeCustomerData{
+	position:absolute;
+	top:185%;
+}
+.customerText{
+	font-size:75%;
+	margin-left:2%;
+	margin-top:0;
+	margin-bottom:0;
+}
+.customerEmail{
+	margin-top:2%;
+	padding-left:23%;
+}
+.customerEmailInput{
+	position:relative;
+	left:14px;
+	width:31%;
+}
+.customerPassword{
+	margin-top:1%;
+	padding-left:21.5%;
+}
+.customerPasswordInput{
+	position:relative;
+	left:14px;
+	width:30.5%;
+}
+.customerRepeatePassword{
+	margin-top:1%;
+	padding-left:13.5%;
+}
+.customerRepeatePasswordInput{
+	position:relative;
+	left:14px;
+	width:27.5%;
+}
+.customerFName{
+	margin-top:1%;
+	padding-left:24%;
+}
+.customerFNameInput{
+	position:relative;
+	left:14px;
+	width:31.5%;
+}
+.customerLName{
+	margin-top:1%;
+	padding-left:20.2%;
+}
+.customerLNameInput{
+	position:relative;
+	left:14px;
+	width:30%;
+}
+.customerDuty{
+	margin-top:1%;
+	padding-left:19.5%;
+}
+.customerDutyInput{
+	position:relative;
+	left:14px;
+	width:29.8%;
+}
+.customerPhone{
+	margin-top:1%;
+	padding-left:20.5%;
+}
+.customerPhoneInput{
+	position:relative;
+	left:14px;
+	width:30.2%;
+}
+.customerSkype{
+	margin-top:1%;
+	padding-left:24.3%;
+}
+.customerSkypeInput{
+	position:relative;
+	left:14px;
+	width:31.6%;
+}
+.customerAdditionalInfo{
+	margin-top:4%;
+	padding-left:7.5%;
+}
+.customerAdditionalInfo div{
+	display:inline-block;
+	position:relative;
+	bottom:70px;
+}
+.customerAdditionalInfoInput{
+	position:relative;
+	left:14px;
+}
+.finalOptions{
+	margin-top:2%;
+	padding-left:7.2%;
+}
+.administratorAndBrokerOption{
+	padding-left:24.3%;
+}
+#submitData{
+	position:absolute;
+	left:45%;
+	top:105%;	
+	background-color:#990000;
+	border-color:#800000;
+	border-radius:5px 5px 5px 5px;
+	color:white;
+	font-weight:bolder;
+	height:5%;
+}
+
+.endLine{
+	position:absolute;
+	top:115%;
+	width:100%;
+	border:1px solid #990000;
+	margin-bottom:30px;
+}

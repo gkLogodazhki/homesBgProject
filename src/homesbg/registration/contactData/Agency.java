@@ -1,6 +1,5 @@
 package homesbg.registration.contactData;
 
-@SuppressWarnings("unused")
 public class Agency extends ContactData{
 	private String agencyName;
 	
@@ -8,22 +7,20 @@ public class Agency extends ContactData{
 		
 	}
 	public Agency(String agencyName, String country, String area, String livingArea, String address
-			, String webSiteLink){
-		super(country,area,livingArea,address,webSiteLink);
-		
-		try {
-			setAgencyName(agencyName);
-		} catch (IllegalContactDataException e) {
-			e.printStackTrace();
-		}
+			,String phone, String webSiteLink) throws IllegalContactDataException{
+		super(country,area,livingArea,address,phone,webSiteLink);
+		setAgencyName(agencyName);
 	}
 	
 	
 	public void setAgencyName(String agencyName) throws IllegalContactDataException {
 		if(agencyName == null || agencyName.trim().length() < 3){
-			throw new IllegalContactDataException("Името на агенцията трябва да съдържа поне 3 символа.");
+			throw new IllegalContactDataException("Illegal agency name");
 		}
 		this.agencyName = agencyName;
 	}
-	
+	public String getAgencyName(){
+		return agencyName;
+		
+	}
 }
